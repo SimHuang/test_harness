@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_harness", "test_harness\test_harness.vcxproj", "{D7247E3A-84D4-4D89-A341-F5829CAB93A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7247E3A-84D4-4D89-A341-F5829CAB93A4}.Debug|x64.ActiveCfg = Debug|x64
+		{D7247E3A-84D4-4D89-A341-F5829CAB93A4}.Debug|x64.Build.0 = Debug|x64
+		{D7247E3A-84D4-4D89-A341-F5829CAB93A4}.Debug|x86.ActiveCfg = Debug|Win32
+		{D7247E3A-84D4-4D89-A341-F5829CAB93A4}.Debug|x86.Build.0 = Debug|Win32
+		{D7247E3A-84D4-4D89-A341-F5829CAB93A4}.Release|x64.ActiveCfg = Release|x64
+		{D7247E3A-84D4-4D89-A341-F5829CAB93A4}.Release|x64.Build.0 = Release|x64
+		{D7247E3A-84D4-4D89-A341-F5829CAB93A4}.Release|x86.ActiveCfg = Release|Win32
+		{D7247E3A-84D4-4D89-A341-F5829CAB93A4}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00D1A857-7A80-4B1C-8476-EA486F7EE08F}
+	EndGlobalSection
+EndGlobal
