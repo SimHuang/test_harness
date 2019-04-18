@@ -5,7 +5,7 @@
 class TestFunctor
 {
 public:
-	//int FunctorQueue();
+	int FunctorQueue();
 	TestFunctor();
 	~TestFunctor();
 };
