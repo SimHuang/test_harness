@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 #include <queue>
+#include <ctime>
+#include <stdexcept>
 
 using namespace std;
 
@@ -36,8 +38,17 @@ public:
 			}
 			else if (logLevel == 2) {
 				string error = ex.what();
-				cout << error;
-				cout << "Fail " + error << endl;
+				//cout << error;
+				cout << "Fail: " + error << endl;
+			}
+			else if (logLevel == 3) {
+				string error = ex.what();
+				//cout << error;
+				cout << "Fail: " + error << endl;
+				//prints out date and time that the error occured
+				std::time_t now = std::time(0);
+				const char* dt = std::ctime(&now);
+				std::cout << "Error occured on: " << dt << '\n';
 			}
 			cout << "-------------------------------" << endl;
 			return false;
@@ -48,6 +59,9 @@ public:
 			cout << "Pass" << endl;
 		}
 		else if (logLevel == 2) {
+			cout << "Pass: " << endl;
+		}
+		else if (logLevel == 3) {
 			cout << "Pass: " << endl;
 		}
 		cout << "-------------------------------" << endl;

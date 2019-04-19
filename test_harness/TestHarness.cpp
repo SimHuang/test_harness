@@ -6,7 +6,7 @@ using namespace std;
 // Empty constructor to set log level to lowest pass/fail
 TestHarness::TestHarness()
 {
-	logLevel = 1;
+	logLevel = 3;
 }
 
 // Constructor to accept a log level

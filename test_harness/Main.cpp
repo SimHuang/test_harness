@@ -1,8 +1,9 @@
 #include <iostream>
 #include <queue>
+#include <stdexcept>
 #include "TestHarness.h"
 #include "TestFunctor.h"
-#include "LinkQueue.h"
+//#include "LinkQueue.h"
 #include "FunctionList.cpp"
 
 using namespace std;
@@ -15,22 +16,40 @@ int testOne()
 }
 
 //Test two
-int testTwo()
+int Divide()
 {
-	cout << "This is test two" << endl;
-	return 1;
+	int quotient = 0;
+	int numerator = 10;
+	int denominator = 0;
+	if (denominator == 0)
+		throw std::overflow_error("Divide by zero exception");
+	else {
+		quotient = numerator / denominator;
+		cout << "The quotient is: " << endl;
+		return quotient;
+	}
 }
 
 //Test Three
-void testThree()
+void OutOfRange()
 {
-	throw exception("Error occured in test three");
+	for (int n = 0; n <= 10; n++) {
+		if (n > 9) //change n to > 10 to print out "end of out of range" instead of throw exception
+			throw std::out_of_range("Out of range exception");
+	}
+	cout << "end of out of range" << endl;
 }
 
 //Test Four
-void testFour()
+void OverflowError()
 {
-	cout << "Test four";
+	const int x = 1000; //make this a very large number to get overflow exception
+	if (x > 100) 
+		throw std::overflow_error("Overflow error has occured");
+	else {
+		int array[x];
+		cout << "Array is acceptable size" << endl;
+	}
 }
 
 /*
@@ -50,19 +69,19 @@ int main() {
 	//task two
 	task taskTwo;
 	taskTwo.id = 2;
-	taskTwo.func = testTwo;
+	taskTwo.func = Divide;
 	taskQueue.push(taskTwo);
 
 	//task three
 	task taskThree;
 	taskThree.id = 2;
-	taskThree.func = testThree;
+	taskThree.func = OutOfRange;
 	taskQueue.push(taskThree);
 
 	//task four
 	task taskFour;
 	taskFour.id = 2;
-	taskFour.func = testFour;
+	taskFour.func = OverflowError;
 	taskQueue.push(taskFour);
 
 	// construct a testharness object and loop through the queue
