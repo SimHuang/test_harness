@@ -1,15 +1,18 @@
 #pragma once
 #include <iostream>
+#include <queue>
 
 using namespace std;
 
 class TestHarness
 {
 
-private: 
-
+private:
+	
 public:
+	int logLevel;
 	TestHarness();
+	TestHarness(int log);
 	~TestHarness();
 
 	/*
@@ -26,11 +29,28 @@ public:
 		try {
 			co();
 		}
-		catch (...) {
-			cout << "Error executing test harness test script";
+		catch (const std::exception & ex) {
+			//fail log level
+			if (logLevel == 1) {
+				cout << "Fail" << endl;
+			}
+			else if (logLevel == 2) {
+				string error = ex.what();
+				cout << error;
+				cout << "Fail " + error << endl;
+			}
+			cout << "-------------------------------" << endl;
 			return false;
 		}
 
+		//check pass log level here
+		if (logLevel == 1) {
+			cout << "Pass" << endl;
+		}
+		else if (logLevel == 2) {
+			cout << "Pass: " << endl;
+		}
+		cout << "-------------------------------" << endl;
 		return true;
 	}
 };

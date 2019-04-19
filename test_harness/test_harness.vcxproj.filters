@@ -31,6 +31,9 @@
     <Filter Include="Header Files\Logger">
       <UniqueIdentifier>{2885c3ec-7e3b-458d-925f-bc9140d34413}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\FunctionList">
+      <UniqueIdentifier>{ec4b7811-dd01-4e09-a67e-08b0a03b9b83}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TestHarness.h">
@@ -40,6 +43,9 @@
       <Filter>Header Files\Logger</Filter>
     </ClInclude>
     <ClInclude Include="TestFunctor.h">
+      <Filter>Header Files\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="AFunctor.h">
       <Filter>Header Files\Test</Filter>
     </ClInclude>
   </ItemGroup>
@@ -55,6 +61,12 @@
     </ClCompile>
     <ClCompile Include="TestFunctor.cpp">
       <Filter>Source Files\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="AFunctor.cpp">
+      <Filter>Source Files\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionList.cpp">
+      <Filter>Source Files\FunctionList</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
