@@ -43,7 +43,10 @@ int main() {
 	taskFour.func = [&] {f4.OverflowError(); };
 	taskQueue.push(taskFour);
 
-	TestHarness testHarness;
+	//Various Test Harness objects with log level parameters
+	//TestHarness testHarness;    //default logLevel = 1
+	//TestHarness testHarness(2);
+	TestHarness testHarness(3);
 	for (int i = 0; i < 4; i++) {
 		testHarness.executor(taskQueue.front().func);
 		taskQueue.pop();
