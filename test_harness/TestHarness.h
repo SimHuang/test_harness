@@ -4,6 +4,7 @@
 #include <queue>
 #include <ctime>
 #include <stdexcept>
+#include "Logger.h"
 
 using namespace std;
 
@@ -29,27 +30,22 @@ public:
 	template<class CallObj>
 	bool executor(CallObj& co)
 	{
+		Logger logger;
 		try {
 			co();
 		}
 		catch (const std::exception & ex) {
-			//fail log level
+			//log the fail and return false
 			if (logLevel == 1) {
-				cout << "Fail" << endl;
+				logger.info("Fail");
 			}
 			else if (logLevel == 2) {
 				string error = ex.what();
-				//cout << error;
-				cout << "Fail: " + error << endl;
+				logger.info("Fail" + error);
 			}
 			else if (logLevel == 3) {
 				string error = ex.what();
-				//cout << error;
-				cout << "Fail: " + error << endl;
-				//prints out date and time that the error occured
-				std::time_t now = std::time(0);
-				const char* dt = std::ctime(&now);
-				std::cout << "Error occured on: " << dt << '\n';
+				logger.verbose("Fail" + error);
 			}
 			cout << "-------------------------------" << endl;
 			return false;
@@ -57,13 +53,13 @@ public:
 
 		//check pass log level here
 		if (logLevel == 1) {
-			cout << "Pass" << endl;
+			logger.info("Pass");
 		}
 		else if (logLevel == 2) {
-			cout << "Pass: " << endl;
+			logger.info("Pass");
 		}
 		else if (logLevel == 3) {
-			cout << "Pass: " << endl;
+			logger.info("Pass");
 		}
 		cout << "-------------------------------" << endl;
 		return true;
