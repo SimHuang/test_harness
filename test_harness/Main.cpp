@@ -4,6 +4,7 @@
 #include "TestHarness.h"
 #include "TestFunctor.h"
 #include "FunctionList.cpp"
+#include "TestDriver.h"
 
 using namespace std;
 
@@ -13,6 +14,11 @@ using namespace std;
  through the queue to execute each of them.
 */
 int main() {
+	/*Three TestRequest XML used for testing*/
+	const string TestRequestOne = "<>";
+	const string TestRequestTwo = "";
+	const string TestRequestThree = "";
+
 	queue<FunctionList::task> taskQueue;
 
 	//task one
@@ -51,6 +57,10 @@ int main() {
 		testHarness.executor(taskQueue.front().func);
 		taskQueue.pop();
 	}
+
+	/*Tessting Testdriver by creating a instance method*/
+	TestDriver temp = TestDriver::createInstance();
+	temp.test();
 
 	return 0;
 }

@@ -37,6 +37,12 @@
     <Filter Include="Source Files\Executive">
       <UniqueIdentifier>{39462ff4-9ef7-461f-a6a3-51bcdc8ccc25}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\TestDriver">
+      <UniqueIdentifier>{09615fa8-a8e3-4db4-8b63-d8b0e44ba0f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\TestDriver">
+      <UniqueIdentifier>{1286f23f-976f-485d-a857-62182d96e6b4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TestHarness.h">
@@ -50,6 +56,12 @@
     </ClInclude>
     <ClInclude Include="AFunctor.h">
       <Filter>Header Files\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="TestDriver.h">
+      <Filter>Header Files\TestDriver</Filter>
+    </ClInclude>
+    <ClInclude Include="ITest.h">
+      <Filter>Header Files\TestDriver</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +82,12 @@
     </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files\Executive</Filter>
+    </ClCompile>
+    <ClCompile Include="TestDriver.cpp">
+      <Filter>Source Files\TestDriver</Filter>
+    </ClCompile>
+    <ClCompile Include="ITest.cpp">
+      <Filter>Source Files\TestDriver</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
