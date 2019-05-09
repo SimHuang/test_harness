@@ -15,9 +15,12 @@ using namespace std;
 */
 int main() {
 	/*Three TestRequest XML used for testing*/
-	const string TestRequestOne = "<>";
-	const string TestRequestTwo = "";
-	const string TestRequestThree = "";
+	const string TestRequestOne = "<TestRequest>"
+									"<TestElement>"
+										"<TestDriver>libraryOne</TestDriver>"
+										"<TestedCode>methodOne</TestedCode>"
+									"</TestElement>"
+							      "</TestRequest>";
 
 	queue<FunctionList::task> taskQueue;
 
