@@ -141,6 +141,9 @@
     <ClCompile Include="TestFunctor.cpp" />
     <ClCompile Include="TestHarness.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Xml Include="XMLFile.xml" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

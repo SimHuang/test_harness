@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestRequests>
+  <Test>
+    <Code>TestOne</Code>
+  </Test>
+  <Test>
+    <Code>TestTwo</Code>
+  </Test>
+</TestRequests>

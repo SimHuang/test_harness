@@ -90,4 +90,7 @@
       <Filter>Source Files\TestDriver</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Xml Include="XMLFile.xml" />
+  </ItemGroup>
 </Project>

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <queue>
+#include <fstream>
 #include <stdexcept>
 #include "TestHarness.h"
 #include "TestFunctor.h"
@@ -65,6 +66,18 @@ int main() {
 	TestDriver temp = TestDriver::createInstance();
 	temp.test();
 
+	cout << "\nTesting reading from XML" << endl;
+
+	//reading from XML
+	ifstream myfile("XMLFile.xml");
+	if (myfile.is_open()){
+		char c = myfile.get();
+		while (myfile.good()) {
+			cout << c;
+			c = myfile.get();
+		}
+	}
+	else cout << "Unable to open file" << endl;
 	return 0;
 }
 
