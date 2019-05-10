@@ -31,7 +31,7 @@ int main() {
 	//not sure what the +4 -4 is doing here but it is the only thing I tried that prints ouf just methodOne lol 
 	string TestOne = TestRequestOne.substr(first+sizeof(first) + 4, last - first - sizeof(first) - 4); 
 	cout << "Printing out tested code from xml string" << endl;
-	cout << TestOne << endl;
+	cout << TestOne << endl << endl;
 
 	//task one
 	FunctionList::task taskOne;
@@ -73,20 +73,33 @@ int main() {
 	/*Tessting Testdriver by creating a instance method*/
 	TestDriver temp = TestDriver::createInstance();
 	temp.test();
-/*
-	cout << "\nTesting reading from XML" << endl;
 
+
+	cout << "\nTesting reading from XML" << endl;
 	//reading from XML
+	string xmloutput;
 	ifstream myfile("XMLFile.xml");
 	if (myfile.is_open()){
 		char c = myfile.get();
+		xmloutput = string(1, c);
 		while (myfile.good()) {
-			cout << c;
+			//cout << c;
 			c = myfile.get();
+			xmloutput.append(string(1, c));
 		}
+		cout << "hopefully a string of the xml:" << endl;
+		cout << xmloutput << endl;
 	}
 	else cout << "Unable to open file" << endl;
-*/
+
+	//printing out part of xml string from xml file
+	size_t firstx = xmloutput.find("<Code>");
+	size_t lastx = xmloutput.find("</Code>");
+	//not sure what the +4 -6 is doing here but it is the only thing I tried that prints ouf just methodOne lol 
+	string TestOneFile = xmloutput.substr(first + sizeof(first) + 4, last - first - sizeof(first) - 6);
+	cout << "\nPrinting out test from xmlfile " << endl;
+	cout << TestOneFile << endl;
+
 	return 0;
 }
 
