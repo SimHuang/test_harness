@@ -25,6 +25,14 @@ int main() {
 
 	queue<FunctionList::task> taskQueue;
 
+	//printing out part of xml string
+	size_t first = TestRequestOne.find("<TestedCode>");
+	size_t last = TestRequestOne.find("</TestedCode>");
+	//not sure what the +4 -4 is doing here but it is the only thing I tried that prints ouf just methodOne lol 
+	string TestOne = TestRequestOne.substr(first+sizeof(first) + 4, last - first - sizeof(first) - 4); 
+	cout << "Printing out tested code from xml string" << endl;
+	cout << TestOne << endl;
+
 	//task one
 	FunctionList::task taskOne;
 	taskOne.id = 1;
@@ -65,7 +73,7 @@ int main() {
 	/*Tessting Testdriver by creating a instance method*/
 	TestDriver temp = TestDriver::createInstance();
 	temp.test();
-
+/*
 	cout << "\nTesting reading from XML" << endl;
 
 	//reading from XML
@@ -78,6 +86,7 @@ int main() {
 		}
 	}
 	else cout << "Unable to open file" << endl;
+*/
 	return 0;
 }
 
