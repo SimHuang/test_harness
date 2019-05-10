@@ -18,6 +18,7 @@ public:
 	TestHarness();
 	TestHarness(int log);
 	~TestHarness();
+	int readXML();
 
 	/*
 	 Accepts any callable object that accepts no arguments and returns a
@@ -63,7 +64,6 @@ public:
 		}
 		cout << "-------------------------------" << endl;
 		return true;
-
 	}
 };
 

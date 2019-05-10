@@ -74,7 +74,10 @@ int main() {
 	TestDriver temp = TestDriver::createInstance();
 	temp.test();
 
+	TestHarness th;
+	th.readXML();
 
+	/*
 	cout << "\nTesting reading from XML" << endl;
 	//reading from XML
 	string xmloutput;
@@ -96,10 +99,10 @@ int main() {
 	size_t firstx = xmloutput.find("<Code>");
 	size_t lastx = xmloutput.find("</Code>");
 	//not sure what the +4 -6 is doing here but it is the only thing I tried that prints ouf just methodOne lol 
-	string TestOneFile = xmloutput.substr(first + sizeof(first) + 4, last - first - sizeof(first) - 6);
+	string TestOneFile = xmloutput.substr(firstx + sizeof(first) + 4, lastx - firstx - sizeof(first) - 4);
 	cout << "\nPrinting out test from xmlfile " << endl;
 	cout << TestOneFile << endl;
-
+	*/
 	return 0;
 }
 
