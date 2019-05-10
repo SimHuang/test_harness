@@ -44,6 +44,11 @@ int TestHarness::readXML() {
 	return 0;
 }
 
+/*This */
+void TestHarness::loadDDL(string ddl, string testedCode)
+{
+}
+
 TestHarness::~TestHarness()
 {
 }

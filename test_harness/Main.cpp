@@ -5,7 +5,6 @@
 #include "TestHarness.h"
 #include "TestFunctor.h"
 #include "FunctionList.cpp"
-#include "TestDriver.h"
 
 using namespace std;
 
@@ -69,10 +68,6 @@ int main() {
 		testHarness.executor(taskQueue.front().func);
 		taskQueue.pop();
 	}
-
-	/*Tessting Testdriver by creating a instance method*/
-	TestDriver temp = TestDriver::createInstance();
-	temp.test();
 
 	TestHarness th;
 	th.readXML();

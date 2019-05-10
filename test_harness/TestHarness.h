@@ -19,6 +19,7 @@ public:
 	TestHarness(int log);
 	~TestHarness();
 	int readXML();
+	void loadDDL(string dll, string testedCode);
 
 	/*
 	 Accepts any callable object that accepts no arguments and returns a
