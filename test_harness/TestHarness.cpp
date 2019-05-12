@@ -1,8 +1,13 @@
 #include "TestHarness.h"
 #include <iostream>
 #include <fstream>
+#include <windows.h>
+#include "Logger.h";
 
 using namespace std;
+
+typedef bool (*funcITest)();
+Logger logger;
 
 // Empty constructor to set log level to lowest pass/fail
 TestHarness::TestHarness()
@@ -44,10 +49,46 @@ int TestHarness::readXML() {
 	return 0;
 }
 
-/*This */
+/*This function will load the DLL and execute the test */
 void TestHarness::loadDDL(string ddl, string testedCode)
 {
+	HINSTANCE hDLL;
+	funcITest Itest;
+	const char* libName = "DLL_ONE"; //should be reading argument
+
+	hDLL = LoadLibraryEx(libName, NULL, NULL);
+	if (hDLL != NULL) {
+		Itest = (funcITest)GetProcAddress(hDLL, "ITest");
+		if (Itest != NULL) {
+			logger.time();
+			bool value = Itest();
+			if (value == true) {
+				logger.log(ddl, testedCode, true);
+			}
+			else {
+				logger.log(ddl, testedCode, false);
+			}
+		}
+	}
+	else {
+		cout << "Error loading DLL";
+	}
+	FreeLibrary(hDLL);
 }
+
+/*
+	This method will parse the testRequest string. For each
+	testElement/testcode it recieved it will call loadDLL to load
+	each library and execute the ITest function.
+*/
+void TestHarness::execute(string testRequest)
+{
+	// call readXml()
+
+	// for loop to loop through all DLL load it and execute the test function
+
+}
+
 
 TestHarness::~TestHarness()
 {

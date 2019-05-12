@@ -1,2 +1,4 @@
-﻿  TestDriver.cpp
+﻿  Test.cpp
+C:\Users\Simon\Desktop\source\test_harness\Dll_ONE\Test.cpp(17): warning C4273: 'divideByZero': inconsistent dll linkage
+  C:\Users\Simon\Desktop\source\test_harness\Dll_ONE\Test.h(9): note: see previous definition of 'divideByZero'
   Dll_ONE.vcxproj -> C:\Users\Simon\Desktop\source\test_harness\Debug\Dll_ONE.dll

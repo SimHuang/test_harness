@@ -34,4 +34,28 @@ void Logger::verbose(string msg)
 	cout << msg << endl;
 }
 
+void Logger::time()
+{
+	std::time_t now = std::time(0);
+	const char* dt = std::ctime(&now);
+	cout << dt << endl;
+}
+
+/*
+	ddl: name of library
+	testcode: name of function
+	result: pass or fail
+*/
+void Logger::log(string dll, string testCode, bool result)
+{
+	if (result == true) {
+		cout << "DLL: " + dll + "TestCode: " + testCode + "Result: Pass" << endl;
+	}
+	else {
+		cout << "DLL: " + dll + "TestCode: " + testCode + "Result: Fail" << endl;
+	}
+	time();
+}
+
+
 

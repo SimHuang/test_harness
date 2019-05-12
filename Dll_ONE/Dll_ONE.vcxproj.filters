@@ -13,12 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\TestDriver">
-      <UniqueIdentifier>{7497b147-7de4-47b4-91b2-5648d01b5fac}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\TestDriver">
-      <UniqueIdentifier>{baa924b3-92d3-4c6d-9313-885cb0b18b4c}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -30,8 +24,8 @@
     <ClInclude Include="Test.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\test_harness\TestDriver.h">
-      <Filter>Header Files\TestDriver</Filter>
+    <ClInclude Include="TestDriver.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -44,8 +38,8 @@
     <ClCompile Include="Test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\test_harness\TestDriver.cpp">
-      <Filter>Source Files\TestDriver</Filter>
+    <ClCompile Include="TestDriver.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

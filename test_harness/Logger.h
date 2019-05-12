@@ -11,5 +11,7 @@ public:
 	~Logger();
 	void info(string);
 	void verbose(string);
+	void time();
+	void log(string ddl, string testCode, bool result);
 };
 

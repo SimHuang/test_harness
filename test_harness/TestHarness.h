@@ -20,8 +20,10 @@ public:
 	~TestHarness();
 	int readXML();
 	void loadDDL(string dll, string testedCode);
+	void execute(string testRequest);
 
 	/*
+	 Project 1
 	 Accepts any callable object that accepts no arguments and returns a
 	 bool predicate to indicate success or failure.
 	 callable objects:

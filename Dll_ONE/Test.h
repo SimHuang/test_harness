@@ -6,5 +6,4 @@
 #define TEST_API __declspec(dllimport)
 #endif
 
-extern "C" TEST_API void sampleTest();
-extern "C" TEST_API void divideByZero();
+extern "C" TEST_API bool divideByZero();
