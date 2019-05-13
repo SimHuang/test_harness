@@ -6,6 +6,8 @@
 #include "TestFunctor.h"
 #include "FunctionList.cpp"
 #include "TestDriver.h"
+#include "../Dll_TWO/TestDriver2.h"
+#include "../Dll_THREE/TestDriver3.h"
 #include <Windows.h>
 
 using namespace std;
