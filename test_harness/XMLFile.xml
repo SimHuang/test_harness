@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TestRequests>
   <Test>
-    <Code>TestOne</Code>
+    <Code1>Dll_ONE</Code1>
   </Test>
   <Test>
-    <Code>TestTwo</Code>
+    <Code2>Dll_TWO</Code2>
+  </Test>
+  <Test>
+    <Code3>Dll_THREE</Code3>
   </Test>
 </TestRequests>

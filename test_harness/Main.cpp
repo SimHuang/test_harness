@@ -27,10 +27,9 @@ int main() {
 							      "</TestRequest>";
 
 	TestHarness testHarness;
-	testHarness.readXML();
-	testHarness.loadDDL("abc", "123");
-
-
+	//testHarness.readXML();
+	//testHarness.loadDDL("abc", "123");
+	testHarness.execute(""); //reads from xml file, loads dlls 
 	/*----- PROJECT 1 CODE ------*/
 	//queue<FunctionList::task> taskQueue;
 
