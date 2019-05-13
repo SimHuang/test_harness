@@ -1,2 +1,9 @@
-﻿  TestHarness.cpp
+﻿  FunctionList.cpp
+  Logger.cpp
+  Main.cpp
+C:\Users\Jacob\Documents\GitHub\test_harness_new\test_harness\FunctionList.cpp(54,8): warning C4101:  'array': unreferenced local variable
+  TestHarness.cpp
+C:\Users\Jacob\Documents\GitHub\test_harness_new\test_harness\FunctionList.cpp(54,8): warning C4101:  'array': unreferenced local variable
+  Generating Code...
+C:\Users\Jacob\Documents\GitHub\test_harness_new\test_harness\TestHarness.cpp(5,10): warning C4067:  unexpected tokens following preprocessor directive - expected a newline
   test_harness.vcxproj -> C:\Users\Jacob\Documents\GitHub\test_harness_new\x64\Debug\test_harness.exe
