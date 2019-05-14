@@ -63,8 +63,8 @@ int TestHarness::readXML() {
 	TestThreeFile = xmloutput.substr(first3 + 7 , last3 - first3 - 7);
 
 	return 0;
-}
-*/
+}*/
+
 /*This function will load the DLL and execute the test */
 void TestHarness::loadDDL(string ddl, string testedCode)
 {
@@ -126,7 +126,7 @@ void TestHarness::execute(string testRequest) {
 	stringstream ss(listOfDlls);
 	while (ss.good()) {
 		string substr;
-		getline(ss, substr, ','); //going through comma delimited testRequest string
+		getline(ss, substr, ','); //going through comma delimited listofdlls string (created from testRequest string) 
 		cout << "\nResult of running " << substr << endl; 
 		loadDDL(substr, "testing");
 	}
