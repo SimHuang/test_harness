@@ -6,8 +6,6 @@
 #include "TestFunctor.h"
 #include "FunctionList.cpp"
 #include "TestDriver.h"
-//#include "../Dll_TWO/TestDriver2.h"
-//#include "../Dll_THREE/TestDriver3.h"
 #include <Windows.h>
 
 using namespace std;
@@ -31,7 +29,15 @@ int main() {
 	TestHarness testHarness;
 	//testHarness.readXML();
 	//testHarness.loadDDL("abc", "123");
-	testHarness.execute(""); //reads from xml file, loads dlls 
+	// call readXml()
+	string TestOneFile;
+	string TestTwoFile;
+	string TestThreeFile;
+	string testRequest = "";
+	testHarness.readXML();
+	cout << "\nTesting dlls: " << TestOneFile << ", " << TestTwoFile << ", " << TestThreeFile << endl;
+	testRequest.append(TestOneFile).append(",").append(TestTwoFile).append(",").append(TestThreeFile);
+	testHarness.execute(testRequest); //reads from xml file, loads dlls 
 	/*----- PROJECT 1 CODE ------*/
 	//queue<FunctionList::task> taskQueue;
 

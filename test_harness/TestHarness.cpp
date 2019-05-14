@@ -103,9 +103,9 @@ void TestHarness::loadDDL(string ddl, string testedCode)
 void TestHarness::execute(string testRequest)
 {
 	// call readXml()
-	readXML();
-	cout << "\nTesting dlls: " << TestOneFile << ", " << TestTwoFile << ", " << TestThreeFile << endl;
-	testRequest.append(TestOneFile).append(",").append(TestTwoFile).append(",").append(TestThreeFile);
+	//readXML();
+	//cout << "\nTesting dlls: " << TestOneFile << ", " << TestTwoFile << ", " << TestThreeFile << endl;
+	//testRequest.append(TestOneFile).append(",").append(TestTwoFile).append(",").append(TestThreeFile);
 	//cout << "\nTestRequest string contents: " << testRequest << endl;
 
 	// for loop to loop through all DLL load it and execute the test function
