@@ -64,9 +64,7 @@ int main() {
 	//testHarness.readXML();
 	cout << "\nTesting dlls: " << TestOneFile << ", " << TestTwoFile << ", " << TestThreeFile << endl;
 	testRequest.append(TestOneFile).append(",").append(TestTwoFile).append(",").append(TestThreeFile);
-
 	testHarness.execute(testRequest); //reads from xml file, loads dlls 
-
 	/*----- PROJECT 1 CODE ------*/
 	//queue<FunctionList::task> taskQueue;
 
