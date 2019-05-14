@@ -1,0 +1,11 @@
+﻿  dll2main.cpp
+  Test2.cpp
+C:\Users\Jacob\Documents\GitHub\test_harness_new\Dll_TWO\Test2.cpp(9,21): warning C4273:  'OverflowError': inconsistent dll linkage
+C:\Users\Jacob\Documents\GitHub\test_harness_new\Dll_TWO\Test2.h(9,26): message :  see previous definition of 'OverflowError'
+  TestDriver2.cpp
+  Generating Code...
+C:\Users\Jacob\Documents\GitHub\test_harness_new\Dll_TWO\Test2.cpp(15,8): warning C4101:  'array': unreferenced local variable
+     Creating library C:\Users\Jacob\Documents\GitHub\test_harness_new\x64\Debug\Dll_TWO.lib and object C:\Users\Jacob\Documents\GitHub\test_harness_new\x64\Debug\Dll_TWO.exp
+LINK : warning LNK4217: symbol 'OverflowError' defined in 'Test2.obj' is imported by 'TestDriver2.obj' in function 'test'
+MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+C:\Users\Jacob\Documents\GitHub\test_harness_new\x64\Debug\Dll_TWO.exe : fatal error LNK1120: 1 unresolved externals

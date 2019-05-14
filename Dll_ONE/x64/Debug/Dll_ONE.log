@@ -1,0 +1,10 @@
+﻿  pch.cpp
+  dllmain.cpp
+  Test.cpp
+C:\Users\Jacob\Documents\GitHub\test_harness_new\Dll_ONE\Test.cpp(17,21): warning C4273:  'divideByZero': inconsistent dll linkage
+  TestDriver.cpp
+  Generating Code...
+C:\Users\Jacob\Documents\GitHub\test_harness_new\Dll_ONE\Test.h(9,26): message :  see previous definition of 'divideByZero'
+     Creating library C:\Users\Jacob\Documents\GitHub\test_harness_new\x64\Debug\Dll_ONE.lib and object C:\Users\Jacob\Documents\GitHub\test_harness_new\x64\Debug\Dll_ONE.exp
+LINK : warning LNK4217: symbol 'divideByZero' defined in 'Test.obj' is imported by 'TestDriver.obj' in function 'test'
+  Dll_ONE.vcxproj -> C:\Users\Jacob\Documents\GitHub\test_harness_new\x64\Debug\Dll_ONE.dll
