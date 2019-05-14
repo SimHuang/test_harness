@@ -4,9 +4,9 @@
     <Code1>Dll_ONE</Code1>
   </Test>
   <Test>
-    <Code2>Dll_TWO</Code2>
+    <Code2>Dll_TWO_new</Code2>
   </Test>
   <Test>
-    <Code3>Dll_THREE</Code3>
+    <Code3>Dll_THREE_new</Code3>
   </Test>
 </TestRequests>

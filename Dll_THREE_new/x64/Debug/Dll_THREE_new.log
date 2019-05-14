@@ -1,0 +1,12 @@
+﻿  pch.cpp
+  dllmain.cpp
+  Test.cpp
+C:\Users\Jacob\Documents\GitHub\test_harness_new\Dll_THREE_new\Test.cpp(30,19): warning C4273:  'OutOfRange': inconsistent dll linkage
+C:\Users\Jacob\Documents\GitHub\test_harness_new\Dll_THREE_new\Test.h(9,26): message :  see previous definition of 'OutOfRange'
+C:\Users\Jacob\Documents\GitHub\test_harness_new\Dll_THREE_new\Test.cpp(34,1): warning C4297:  'OutOfRange': function assumed not to throw an exception but does
+  TestDriver.cpp
+  Generating Code...
+C:\Users\Jacob\Documents\GitHub\test_harness_new\Dll_THREE_new\Test.cpp(34,1): message :  __declspec(nothrow), throw(), noexcept(true), or noexcept was specified on the function
+     Creating library C:\Users\Jacob\Documents\GitHub\test_harness_new\x64\Debug\Dll_THREE_new.lib and object C:\Users\Jacob\Documents\GitHub\test_harness_new\x64\Debug\Dll_THREE_new.exp
+LINK : warning LNK4217: symbol 'OutOfRange' defined in 'Test.obj' is imported by 'TestDriver.obj' in function 'test'
+  Dll_THREE_new.vcxproj -> C:\Users\Jacob\Documents\GitHub\test_harness_new\x64\Debug\Dll_THREE_new.dll
