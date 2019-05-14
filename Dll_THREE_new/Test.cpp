@@ -35,7 +35,7 @@ bool OutOfRange() {
 		}
 		cout << "end of out of range" << endl;
 	}
-	catch (runtime_error e) {
+	catch (out_of_range e) {
 		return false;
 	}
 	return true;
