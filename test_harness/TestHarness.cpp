@@ -25,7 +25,7 @@ TestHarness::TestHarness(int log)
 {
 	logLevel = log;
 }
- 
+ /*
 int TestHarness::readXML() {
 	//cout << "\nTesting reading from XML" << endl;
 	//reading from XML
@@ -64,7 +64,7 @@ int TestHarness::readXML() {
 
 	return 0;
 }
-
+*/
 /*This function will load the DLL and execute the test */
 void TestHarness::loadDDL(string ddl, string testedCode)
 {
@@ -100,16 +100,30 @@ void TestHarness::loadDDL(string ddl, string testedCode)
 	testElement/testcode it recieved it will call loadDLL to load
 	each library and execute the ITest function.
 */
-void TestHarness::execute(string testRequest)
-{
-	// call readXml()
-	//readXML();
-	//cout << "\nTesting dlls: " << TestOneFile << ", " << TestTwoFile << ", " << TestThreeFile << endl;
-	//testRequest.append(TestOneFile).append(",").append(TestTwoFile).append(",").append(TestThreeFile);
-	//cout << "\nTestRequest string contents: " << testRequest << endl;
+void TestHarness::execute(string testRequest) {
+
+	size_t first1 = testRequest.find("<Code1>");
+	size_t last1 = testRequest.find("</Code1>");
+	//the +7 -7 gets rid of  <code> part in the string 
+	TestOneFile = testRequest.substr(first1 + 7, last1 - first1 - 7);
+
+	//printing out part of xml for dll two
+	size_t first2 = testRequest.find("<Code2>");
+	size_t last2 = testRequest.find("</Code2>");
+	TestTwoFile = testRequest.substr(first2 + 7, last2 - first2 - 7);
+
+	//printing out part of xml for dll three
+	size_t first3 = testRequest.find("<Code3>");
+	size_t last3 = testRequest.find("</Code3>");
+	TestThreeFile = testRequest.substr(first3 + 7, last3 - first3 - 7);
+
+	string listOfDlls = "";
+	//testHarness.readXML();
+	cout << "\nTesting dlls: " << TestOneFile << ", " << TestTwoFile << ", " << TestThreeFile << endl;
+	listOfDlls.append(TestOneFile).append(",").append(TestTwoFile).append(",").append(TestThreeFile);
 
 	// for loop to loop through all DLL load it and execute the test function
-	stringstream ss(testRequest);
+	stringstream ss(listOfDlls);
 	while (ss.good()) {
 		string substr;
 		getline(ss, substr, ','); //going through comma delimited testRequest string

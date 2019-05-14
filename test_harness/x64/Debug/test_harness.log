@@ -1,3 +1,5 @@
 ﻿  Main.cpp
+  TestHarness.cpp
+  Generating Code...
 C:\Users\Jacob\Documents\GitHub\test_harness_neww\test_harness\FunctionList.cpp(54,8): warning C4101:  'array': unreferenced local variable
   test_harness.vcxproj -> C:\Users\Jacob\Documents\GitHub\test_harness_neww\x64\Debug\test_harness.exe
